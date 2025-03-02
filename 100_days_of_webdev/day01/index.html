@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #EAE6FF;
+            font-family: 'Poppins', cursive;
+        }
+
+        #main {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-direction: column;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #B7B1F2;
+            border: none;
+            padding: 5px 20px;  /* Reduced height */
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            color: white;
+            font-weight: bold;
+            width: 12rem; /* Increased width */
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #9D95F0;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: flex;
+            gap: 20px;
+            padding: 0em 2em;
+            margin: 0 40px;
+        }
+
+        #number {
+            font-size: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="main">
+        <h1>Counter</h1>
+        <div class="btn">
+            <button id="inc">+</button>
+            <p id="number"></p>
+            <button id="dec">-</button>
+        </div>
+    </section>
+    <script>
+        const inc = document.getElementById("inc")
+        const dec = document.getElementById("dec")
+        const num = document.getElementById("number")
+
+        let i = 0;
+        num.textContent = i;
+
+        inc.addEventListener("click", function () {
+            num.textContent = ++i;
+        })
+
+        dec.addEventListener("click", function () {
+            num.textContent = --i;
+        })
+    </script>
+</body>
+
+</html>
